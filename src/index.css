@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+#root{
+    background-color: #52525B;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+.TodoWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #27272A;
+    width: 500px;
+    padding: 25px;
+    margin-top: 0px;
+    border-radius: 3px;
+}
+
+h1{
+    font-family: 'Space Grotesk', sans-serif;
+    color: #9BEF1B;
+    text-align: center;
+}
+
+.input-box {
+    outline: none;
+    background: none;
+    height: 40px;
+    width: 300px;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    border: 1px solid #9BEF1B;
+    color: white;
+  }
+
+.input-box::placeholder {
+    color: #ffffff4d;
+  }
+
+.add-task{
+    background: #9BEF1B;
+    font-family: 'Kanit', sans-serif;;
+    color: #27272A;
+    font-weight: 600;
+    height: 40px;
+    border: none;
+    padding: 0.55rem;
+    cursor: pointer;
+}
+
+.Todos{
+    display: flex;
+    height: 40px;
+    width: 370px;
+    justify-content: space-between;
+    align-items: center ;
+    background: #52525B;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.Todos > p{
+    cursor: pointer;
+}
+
+.icons{
+    color: #9BEF1B;
+}
+
+.edit, .delete{
+    cursor: pointer;
+}
+
+.edit{
+    margin-right: 10px;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: #27272A;
+    cursor: pointer;
+}
