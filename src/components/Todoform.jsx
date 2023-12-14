@@ -16,7 +16,7 @@ const Todoform = ({addTodo}) => {
 
   return (
     <div>
-      <h1>Get things Done!</h1>
+      <h1>To-do Hub!</h1>
       <form onSubmit={handleSubmit}>
           <input 
           type="text"
