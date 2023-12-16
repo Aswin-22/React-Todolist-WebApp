@@ -9,8 +9,8 @@ uuidv4();
 const Todowrapper = () => {
   // JSON.parse(localStorage.getItem('todos')) ?? []
   const [todos, setTodos] = React.useState(
-    JSON.parse(localStorage.getItem('todos')).length !== 0 ?
-    JSON.parse(localStorage.getItem('todos')) : []
+    JSON.parse(localStorage.getItem('todos')) === null ? [] :
+    JSON.parse(localStorage.getItem('todos')) 
   )
   
 
