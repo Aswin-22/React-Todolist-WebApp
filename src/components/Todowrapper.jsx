@@ -7,8 +7,21 @@ import { v4 as uuidv4 } from 'uuid'
 uuidv4();
 
 const Todowrapper = () => {
+  // JSON.parse(localStorage.getItem('todos')) ?? []
+  const [todos, setTodos] = React.useState(
+    JSON.parse(localStorage.getItem('todos')).length !== 0 ?
+    JSON.parse(localStorage.getItem('todos')) : []
+  )
+  
 
-  const [todos, setTodos] = React.useState([])
+  React.useEffect(() => {
+    const data = window.localStorage.getItem('todos');
+    if ( data !== null ) setTodos(JSON.parse(data));
+  }, []);
+
+  React.useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   function addTodo(Todo){
     setTodos([...todos,
@@ -53,7 +66,7 @@ const Todowrapper = () => {
   function editTodo(id, task){
     setTodos(todos.map(
       todo => todo.id === id ?
-      {...todo, task, isEditing: !todo.isEditing} : todo
+      {...todo, task: task, isEditing: !todo.isEditing} : todo
     ))
   }
 
